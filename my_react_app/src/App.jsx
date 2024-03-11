@@ -157,30 +157,51 @@ const PostInfoPage = ({posts, users}) => {
   console.log("🚀 ~ PostInfoPage ~ params:", params1)
   return (
     <div>
-      <h2>Пост №{params1.postId}:</h2>
+      <p style={{
+        display: 'flex',
+        flexDirection: 'column',
+        width: '64em',
+        margin: '0 auto',
+        marginTop: '20px',
+        }}>
+      <h2>
+        Пост №{params1.postId}:</h2>
+      </p>
       <Card 
         style={{
           border: '1px solid #333',
           padding: '12px',
           borderRadius: '8px',
+          width: '64em',
+          margin: '0 auto',
+          marginTop: '20px',
         }}
         title={`${user.username}: ${post.title}`}
       > {post.body} </Card>
-      <h2>Об авторе:</h2>
-      <h5>Никнеим: {user.username};</h5>
-      <h5>Имя: {user.name};</h5>
-      <h5>Электронная почта: {user.email};</h5>
-      <h5>Адрес: {user.address.city}, {user.address.street}, {user.address.suite};</h5>
-      <h5>Zip-код: {user.address.zipcode};</h5>
-      <h5>Геолокация: {user.address.geo.lat}, {user.address.geo.lng};</h5>
-      <h5>Телефон: {user.phone};</h5>
-      <h5>Сайт: {user.website};</h5>
-      <h5>Компания: {user.company.name} ("{user.company.catchPhrase}", {user.company.bs});</h5>
-      <h2>Комментарии:</h2>
+      <p style={{
+        display: 'flex',
+        flexDirection: 'column',
+        width: '64em',
+        margin: '0 auto',
+        marginTop: '20px',
+        }}>
+        <h2>Об авторе:</h2>
+        <h5>Никнеим: {user.username};</h5>
+        <h5>Имя: {user.name};</h5>
+        <h5>Электронная почта: {user.email};</h5>
+        <h5>Адрес: {user.address.city}, {user.address.street}, {user.address.suite};</h5>
+        <h5>Zip-код: {user.address.zipcode};</h5>
+        <h5>Геолокация: {user.address.geo.lat}, {user.address.geo.lng};</h5>
+        <h5>Телефон: {user.phone};</h5>
+        <h5>Сайт: {user.website};</h5>
+        <h5>Компания: {user.company.name} ("{user.company.catchPhrase}", {user.company.bs});</h5>
+        <h2>Комментарии:</h2>
+      </p>
       <p style={{
         display: 'flex',
         flexDirection: 'column',
         gap: '8px',
+        width: '64em',
         margin: '0 auto',
         marginTop: '20px',
       }}>
