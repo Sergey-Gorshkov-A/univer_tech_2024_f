@@ -104,7 +104,7 @@ const PostComponent = ({ postData, userData }) => {
           borderRadius: '8px',
         }}
         title={`${user.username}: ${postData.title}`}
-        extra={`website: ${user.website}`}
+        extra={postData.id}
         onClick={() => navigate(postlink)}
       > {postData.body} </Card>
     </div>
@@ -181,7 +181,6 @@ const PostInfoPage = ({posts, users}) => {
         display: 'flex',
         flexDirection: 'column',
         gap: '8px',
-        width: '64em',
         margin: '0 auto',
         marginTop: '20px',
       }}>
