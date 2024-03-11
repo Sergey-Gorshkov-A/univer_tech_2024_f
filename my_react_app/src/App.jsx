@@ -158,8 +158,6 @@ const PostInfoPage = ({posts, users}) => {
   return (
     <div>
       <p style={{
-        display: 'flex',
-        flexDirection: 'column',
         width: '64em',
         margin: '0 auto',
         marginTop: '20px',
@@ -174,13 +172,11 @@ const PostInfoPage = ({posts, users}) => {
           borderRadius: '8px',
           width: '64em',
           margin: '0 auto',
-          marginTop: '20px',
+          marginTop: '5px',
         }}
         title={`${user.username}: ${post.title}`}
       > {post.body} </Card>
       <p style={{
-        display: 'flex',
-        flexDirection: 'column',
         width: '64em',
         margin: '0 auto',
         marginTop: '20px',
