@@ -175,7 +175,7 @@ const PostInfoPage = ({posts, users}) => {
       <h5>Геолокация: {user.address.geo.lat}, {user.address.geo.lng};</h5>
       <h5>Телефон: {user.phone};</h5>
       <h5>Сайт: {user.website};</h5>
-      <h5>Компания: {user.company.name} ({user.company.catchPhrase}, {user.company.bs});</h5>
+      <h5>Компания: {user.company.name} ("{user.company.catchPhrase}", {user.company.bs});</h5>
       <h2>Комментарии:</h2>
       <p style={{
         display: 'flex',
