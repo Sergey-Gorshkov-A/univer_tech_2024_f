@@ -3,21 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { MyStore } from './store/Context';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { store } from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const customStoreValue = {
-  number: 5,
-  name: 'Ivan',
-  email: '1@mail.ru'
-}
+
+const store1 = store
+
 root.render(
-  <MyStore.Provider value={customStoreValue}>
+  <Provider store={store1}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </MyStore.Provider>
+  </Provider>
   //<React.StrictMode>
   //</React.StrictMode>
 );

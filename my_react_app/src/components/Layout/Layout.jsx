@@ -5,7 +5,7 @@ import { useCustomHook } from "../../hooks/myCustomHook";
 
 import './Layout.css'
 import { Outlet, useNavigate } from "react-router-dom";
-import { Layout, Menu } from 'antd'
+import { Layout, Menu, Button} from 'antd'
 
 
 export const PageLayout = ({children}) => {
@@ -33,10 +33,14 @@ export const PageLayout = ({children}) => {
     //const textareaRef = useRef()
 
     const menuItems = [
-      { id: 1, label: 'Главная', key: 1, link: '/'},
-      { id: 2, label: 'Инфо', key: 2, link: '/info'},
-      { id: 3, label: 'Пользователь', key: 3, link: '/user'},
-      { id: 4, label: 'Вход/Регистрация', key: 4, link: '/auth'},
+      { id: 1, label: 'Главная', key: 1, link: '/dashboard'},
+      { id: 2, label: 'Инфо', key: 2, link: '/dashboard/info'},
+      { id: 3, label: 'Пользователь', key: 3, link: '/dashboard/user'},
+      { id: 4, label: 'Вход/Региcтрация', key: 4, link: '/auth/login'},
+    ]
+
+    const accountItems = [
+      {id: 1, label: children.name, key: 3, link: '/account/'}
     ]
 
     const handleNavigate = (key) => {
@@ -50,7 +54,6 @@ export const PageLayout = ({children}) => {
     return (
         <Layout>
           <Header style={{display: 'flex', alignItems: 'center'}}>
-
             <Menu
               items={menuItems}
               theme="dark"
@@ -58,6 +61,14 @@ export const PageLayout = ({children}) => {
               defaultSelectedKeys={['1']}
               onClick={({key}) => handleNavigate(key)}
             />
+            <Header>
+              <div style={{
+                paddingLeft: '65vw',
+                position: 'absolute'
+              }}>
+                <Button onClick={() => navigate('/account/')}>{children.name}</Button>
+              </div>
+            </Header>
           </Header>
           <Content>
             <Layout>
